@@ -82,13 +82,14 @@ body {
 Make it animate nicely. You'll need CSS3 for this*/
 .rot90 {
   /* Firefox */
-  -moz-transform: all 1s ease rotate(90deg);
+  -moz-transform: rotate(90deg);
   /* WebKit */
-  -webkit-transform: all 1s ease rotate(90deg);
+  -webkit-transform: rotate(90deg);
   /* Opera */
-  -o-transform: all 1s ease rotate(90deg);
+  -o-transform: rotate(90deg);
   /* Standard */
-  transform: all 1s ease rotate(90deg);
+  transform: rotate(90deg);
+  transition: all 1s ease;
 }
 
 /*Add CSS styles to rotate the element 180deg
@@ -108,11 +109,12 @@ Make it animate nicely. You'll need CSS3 for this*/
 Make it animate nicely. You'll need CSS3 for this*/
 .rot270 {
   /* Firefox */
-  -moz-transform: all 1s ease rotate(270deg);
+  -moz-transform: rotate(270deg);
   /* WebKit */
-  -webkit-transform: all 1s ease rotate(270deg);
+  -webkit-transform: rotate(270deg);
   /* Opera */
-  -o-transform: all 1s ease rotate(270deg);
+  -o-transform: rotate(270deg);
   /* Standard */
-  transform: all 1s ease rotate(270deg);
+  transform: rotate(270deg);
+  transition: all 1s ease;
 }

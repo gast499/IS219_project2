@@ -86,6 +86,10 @@ $(document).ready( function() {
 	// This initially hides the photos' metadata information
 	$('.details').eq(0).hide();
 	
+  //have the more indicator button clickable
+  $('.moreIndicator').click(function(){
+    $('.details').eq(0).toggle();
+  });
 });
 
 window.addEventListener('load', function() {
