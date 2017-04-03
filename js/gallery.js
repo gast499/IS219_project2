@@ -109,7 +109,11 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-  $("#photo").attr("src", mImages[0].img);
+  if (mCurrentIndex === mImages.length){
+    mCurrentIndex = 0;
+  }
+  $("#photo").attr("src", mImages[mCurrentIndex].img);
+  mCurrentIndex++;
 }
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
