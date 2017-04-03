@@ -89,6 +89,8 @@ $(document).ready( function() {
   //have the more indicator button clickable
   $('.moreIndicator').click(function(){
     $('.details').eq(0).toggle();
+    $(this).toggleClass("rot90");
+    $(this).toggleClass("rot270");
   });
 });
 
