@@ -38,23 +38,39 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
+ console.log(mUrl);
 }
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
 
-// XMLHttpRequest variable
-var mRequest = new XMLHttpRequest();
+// URL for the JSON to load by default
+// Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
+var mUrl = 'http://web.njit.edu/~tmh27/is219/Project2/images.json';
 
-// Array holding GalleryImage objects (see below).
-var mImages = [];
 
 // Holds the retrived JSON information
 var mJson;
 
-// URL for the JSON to load by default
-// Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'insert_url_here_to_image_json';
+// XMLHttpRequest variable
+var mRequest = new XMLHttpRequest();
+mRequest.onreadystatechange = function(){
+  if (mRequest.readyState == 4 && mRequest.status == 200){
+    try {
+      mJson = JSON.parse(mRequest.responseText);
+      console.log(mJson);
+    }
+    catch(err){
+      console.log(err.message);
+    }
+  }
+}
+mRequest.open("GET", mURL, true);
+mRequest.send();
+
+
+// Array holding GalleryImage objects (see below).
+var mImages = [];
 
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
@@ -79,7 +95,11 @@ window.addEventListener('load', function() {
 
 }, false);
 
-function GalleryImage() {
+function GalleryImage(location, description, date, img) {
+  this.location = location;
+  this.description = description;
+  this.date = date;
+  this.img = img;
 	//implement me as an object to hold the following data about an image:
 	//1. location where photo was taken
 	//2. description of photo
