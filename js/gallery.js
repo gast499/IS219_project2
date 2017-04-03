@@ -45,7 +45,7 @@ var mCurrentIndex = 0;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'http://web.njit.edu/~tmh27/is219/Project2/images.json';
+var mUrl = 'https://web.njit.edu/~tmh27/is219/Project2/images.json';
 
 
 // Holds the retrived JSON information
