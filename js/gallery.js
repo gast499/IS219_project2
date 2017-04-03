@@ -38,7 +38,6 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
- console.log(mUrl);
 }
 
 // Counter for the mImages array
@@ -65,7 +64,7 @@ mRequest.onreadystatechange = function(){
     }
   }
 }
-mRequest.open("GET", mURL, true);
+mRequest.open("GET", mUrl, true);
 mRequest.send();
 
 
