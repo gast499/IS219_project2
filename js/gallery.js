@@ -107,6 +107,8 @@ mRequest.onreadystatechange = function(){
 mRequest.open("GET", mUrl, true);
 mRequest.send();
 
+console.log(mImages);
+
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
