@@ -33,6 +33,7 @@ function animate() {
 /************* DO NOT TOUCH CODE ABOVE THIS LINE ***************/
 
 function swapPhoto() {
+  $("#slideShow")
 	//Add code here to access the #slideShow element.
 	//Access the img element and replace its source
 	//with a new image from your images array which is loaded 
@@ -45,7 +46,7 @@ var mCurrentIndex = 0;
 
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
-var mUrl = 'https://web.njit.edu/~tmh27/is219/Project2/images.json';
+var mUrl = '../images.json';
 
 
 // Holds the retrived JSON information
