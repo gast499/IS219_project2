@@ -59,7 +59,7 @@ function GalleryImage(location, description, date, img) {
 }
 
 function swapPhoto() {
-  $("#slideShow")
+  //$("#slideShow")
 	//Add code here to access the #slideShow element.
 	//Access the img element and replace its source
 	//with a new image from your images array which is loaded 
