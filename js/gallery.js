@@ -65,6 +65,7 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
+  $("photo").attr("src", mImages[0].imgPath);
 }
 
 // Counter for the mImages array

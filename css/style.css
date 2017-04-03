@@ -18,10 +18,15 @@ body {
 	position: relative;
 }
 
+#photo {
+  width: 518px;
+}
+
 .photoHolder {
 	position: relative;
 	width: 80%;
 	margin: 0 auto;
+  
 }
 
 .moreIndicator {
