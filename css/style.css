@@ -54,6 +54,10 @@ body {
 	width: 42px;
 }
 
+#prevPhoto:hover {
+  opacity: 0.3;
+}
+
 #nextPhoto {
 	height: 42px;
 	width: 42px;
@@ -90,13 +94,13 @@ Make it animate nicely. You'll need CSS3 for this*/
 Make it animate nicely. You'll need CSS3 for this*/
 .rot180 {
   /* Firefox */
-  -moz-transform: all 1s ease rotate(180deg);
+  -moz-transform: rotate(180deg);
   /* WebKit */
-  -webkit-transform: all 1s ease rotate(180deg);
+  -webkit-transform: rotate(180deg);
   /* Opera */
-  -o-transform: all 1s ease rotate(180deg);
+  -o-transform: rotate(180deg);
   /* Standard */
-  transform: all 1s ease rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*Add CSS styles to rotate the element 270deg
