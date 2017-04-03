@@ -58,15 +58,7 @@ function GalleryImage(location, description, date, img) {
 	//4. either a String (src URL) or an an HTMLImageObject (bitmap of the photo. https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
 }
 
-function swapPhoto() {
-  //$("#slideShow")
-	//Add code here to access the #slideShow element.
-	//Access the img element and replace its source
-	//with a new image from your images array which is loaded 
-	//from the JSON string
-	console.log('swap photo');
-  $("#photo").attr("src", mImages[0].imgPath);
-}
+
 
 // Counter for the mImages array
 var mCurrentIndex = 0;
@@ -110,6 +102,15 @@ mRequest.send();
 
 console.log(mImages);
 
+function swapPhoto() {
+  //$("#slideShow")
+	//Add code here to access the #slideShow element.
+	//Access the img element and replace its source
+	//with a new image from your images array which is loaded 
+	//from the JSON string
+	console.log('swap photo');
+  $("#photo").attr("src", mImages[0].imgPath);
+}
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
 //@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
