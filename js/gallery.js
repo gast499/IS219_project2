@@ -95,7 +95,7 @@ mRequest.onreadystatechange = function(){
       
       for (var i = 0; i < mJson.images.length; i++){
         var myLine = mJson.images[i];
-        var myImg = new GalleryImage(myLine["imgLocation"], myLine["description"], myLine["date"], myLine["imgPath"]);
+        var myImg = new GalleryImage(myLine.imgLocation, myLine.description, myLine.date, myLine.imgPath);
         mImages.push(myImg);
       }
     }
