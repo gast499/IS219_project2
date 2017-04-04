@@ -102,7 +102,7 @@ mRequest.send();
 
 console.log(mImages);
 var first = true;
-var prev = false;
+
 function swapPhoto() {
   //$("#slideShow")
 	//Add code here to access the #slideShow element.
@@ -121,13 +121,13 @@ function swapPhoto() {
   else if(mCurrentIndex < 0){
     mCurrentIndex = mImages.length - 1;
   }
-  prev = false;
   console.log(mCurrentIndex);
   $("#photo").attr("src", mImages[mCurrentIndex].img);
   $('.location').text("Location: " + mImages[mCurrentIndex].location);
   $('.description').text("Description: " + mImages[mCurrentIndex].description);
   $('.date').text("Date: " + mImages[mCurrentIndex].date);  
   mCurrentIndex++;
+  
 }
 
 //You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
