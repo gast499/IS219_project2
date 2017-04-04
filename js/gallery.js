@@ -109,7 +109,7 @@ function swapPhoto() {
 	//with a new image from your images array which is loaded 
 	//from the JSON string
 	console.log('swap photo');
-  if (mCurrentIndex === mImages.length){
+  if (mCurrentIndex >= mImages.length){
     mCurrentIndex = 0;
   }
   $("#photo").attr("src", mImages[mCurrentIndex].img);
