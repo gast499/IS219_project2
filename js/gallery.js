@@ -101,7 +101,7 @@ mRequest.open("GET", mUrl, true);
 mRequest.send();
 
 console.log(mImages);
-
+var first = true;
 function swapPhoto() {
   //$("#slideShow")
 	//Add code here to access the #slideShow element.
@@ -111,6 +111,9 @@ function swapPhoto() {
 	console.log('swap photo');
   if (mCurrentIndex >= mImages.length){
     mCurrentIndex = 0;
+  }
+  else if(first == true){
+  first = false;
   }
   else if(mCurrentIndex <= 0){
     mCurrentIndex = mImages.length - 1;
