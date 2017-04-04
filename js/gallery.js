@@ -139,7 +139,7 @@ $(document).ready( function() {
   });
   
   $('#nextPhoto').click(function(){
-    mCurrentIndex += 1;
+    //mCurrentIndex += 1;
     swapPhoto();
   });
   
