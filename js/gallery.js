@@ -136,6 +136,19 @@ $(document).ready( function() {
     $(this).toggleClass("rot90");
     $(this).toggleClass("rot270");
   });
+  
+  $('#nextPhoto').click(function(){
+    mCurrentIndex += 1;
+    swapPhoto();
+  });
+  
+  $('#prevPhoto').click(function(){
+    mCurrentIndex -= 1;
+    if (mCurrentIndex  < 0){
+      mCurrentIndex = mImages.length;
+    }
+    swapPhoto();
+  });
 });
 
 window.addEventListener('load', function() {
