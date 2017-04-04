@@ -143,10 +143,10 @@ $(document).ready( function() {
   });
   
   $('#prevPhoto').click(function(){
-    mCurrentIndex -= 1;
-    if (mCurrentIndex  < 0){
+    if (mCurrentIndex  === 0){
       mCurrentIndex = mImages.length-1;
     }
+    mCurrentIndex -= 1;
     swapPhoto();
   });
 });
