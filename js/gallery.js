@@ -66,11 +66,11 @@ var mCurrentIndex = 0;
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = '../images.json';
-console.log(typeof $_GET);
+//console.log(typeof $_GET);
 if (typeof $_GET["json"] !== 'undefined'){
   mUrl = '../' + $_GET["json"];
 } 
-console.log(mUrl);
+//console.log(mUrl);
 // Array holding GalleryImage objects (see below).
 var mImages = [];
 
@@ -128,15 +128,6 @@ function swapPhoto() {
   $('.date').text("Date: " + mImages[mCurrentIndex].date);  
   mCurrentIndex++;
   
-}
-
-//You can optionally use the following function as your event callback for loading the source of Images from your json data (for HTMLImageObject).
-//@param A GalleryImage object. Use this method for an event handler for loading a gallery Image object (optional).
-function makeGalleryImageOnloadCallback(galleryImage) {
-	return function(e) {
-		galleryImage.img = e.target;
-		mImages.push(galleryImage);
-	}
 }
 
 $(document).ready( function() {
