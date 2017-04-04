@@ -44,7 +44,7 @@ function getQueryParams(qs) {
 }
 
 var $_GET = getQueryParams(document.location.search);
-console.log($_GET["fname"]); // would output "John"
+console.log($_GET["json"]); // would output "John"
 
 function GalleryImage(location, description, date, img) {
   this.location = location;
@@ -68,7 +68,7 @@ var mCurrentIndex = 0;
 var mUrl = '../images.json';
 
 if (typeof $_Get !== 'undefined'){
-  mUrl = '../' + $_Get["fname"];
+  mUrl = '../' + $_Get["json"];
 } 
 
 // Array holding GalleryImage objects (see below).
