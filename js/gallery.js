@@ -66,8 +66,8 @@ var mCurrentIndex = 0;
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = '../images.json';
-console.log(typeof $_Get);
-if (typeof $_Get !== 'undefined'){
+//console.log(typeof $_Get);
+if ($_Get["json"] !== 'undefined'){
   mUrl = '../' + $_Get["json"];
 } 
 console.log(mUrl);
