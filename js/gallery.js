@@ -44,7 +44,8 @@ function getQueryParams(qs) {
 }
 
 var $_GET = getQueryParams(document.location.search);
-console.log($_GET["json"].length); // would output "John"
+console.log($_GET["json"]); // would output "John"
+console.log($_GET["json"].length);
 
 function GalleryImage(location, description, date, img) {
   this.location = location;
@@ -66,10 +67,10 @@ var mCurrentIndex = 0;
 // URL for the JSON to load by default
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = '../images.json';
-console.log(typeof $_Get);
-if (typeof $_Get !== 'undefined'){
-  mUrl = '../' + $_Get["json"];
-}
+console.log(typeof $_GET);
+if (typeof $_GET !== 'undefined'){
+  mUrl = '../' + $_GET["json"];
+} 
 console.log(mUrl);
 // Array holding GalleryImage objects (see below).
 var mImages = [];
