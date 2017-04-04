@@ -15,7 +15,7 @@
 
 animate();
 
-var mLastFrameTime = 0;
+var mLastFrameTime = 5000;
 var mWaitTime = 5000; //time in ms
 function animate() {
     requestAnimFrame( animate );
@@ -145,12 +145,14 @@ $(document).ready( function() {
   $('#nextPhoto').click(function(){
     //mCurrentIndex += 1;
     first = false;
+    mLastFrameTime = 0;
     swapPhoto();
   });
   
   $('#prevPhoto').click(function(){
     mCurrentIndex = mCurrentIndex - 2;
     first=false;
+    mLastFrameTime = 0;
     swapPhoto();
   });
 });
