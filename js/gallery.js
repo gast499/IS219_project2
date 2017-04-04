@@ -145,7 +145,7 @@ $(document).ready( function() {
   $('#prevPhoto').click(function(){
     mCurrentIndex -= 1;
     if (mCurrentIndex  < 0){
-      mCurrentIndex = mImages.length;
+      mCurrentIndex = mImages.length-1;
     }
     swapPhoto();
   });
