@@ -118,7 +118,7 @@ function swapPhoto() {
   first = false;
   }
 
-  else if(mCurrentIndex <= -1){
+  else if(mCurrentIndex <= 0){
     mCurrentIndex = mImages.length - 1;
   }
   prev = false;
@@ -158,9 +158,6 @@ $(document).ready( function() {
   });
   
   $('#prevPhoto').click(function(){
-    if(mCurrentIndex === 1){
-      mCurrentIndex+=1;
-    }
     mCurrentIndex = mCurrentIndex - 2;
     first=false;
     swapPhoto();
