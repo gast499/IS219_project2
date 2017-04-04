@@ -67,7 +67,7 @@ var mCurrentIndex = 0;
 // Some options for you are: images.json, images.short.json; you will need to create your own extra.json later
 var mUrl = '../images.json';
 console.log(typeof $_Get);
-if (typeof $_Get != null){
+if ($_Get['json'] != null){
   mUrl = '../' + $_Get["json"];
 }
 console.log(mUrl);
