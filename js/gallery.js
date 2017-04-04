@@ -150,7 +150,7 @@ $(document).ready( function() {
     /*if (mCurrentIndex  === 0){
       mCurrentIndex = mImages.length-1;
     }*/
-    mCurrentIndex = mCurrentIndex - 1;
+    mCurrentIndex = mCurrentIndex - 2;
     swapPhoto();
   });
 });
