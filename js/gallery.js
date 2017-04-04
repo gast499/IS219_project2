@@ -102,6 +102,7 @@ mRequest.send();
 
 console.log(mImages);
 var first = true;
+var prev = false;
 function swapPhoto() {
   //$("#slideShow")
 	//Add code here to access the #slideShow element.
@@ -117,9 +118,13 @@ function swapPhoto() {
   first = false;
   }
   
+  else if(prev == true && mCurrentIndex===0){
+    //skip this conditional tree
+  }
   else if(mCurrentIndex <= 0){
     mCurrentIndex = mImages.length - 1;
   }
+  prev = false;
   console.log(mCurrentIndex);
   $("#photo").attr("src", mImages[mCurrentIndex].img);
   $('.location').text("Location: " + mImages[mCurrentIndex].location);
@@ -160,6 +165,7 @@ $(document).ready( function() {
       mCurrentIndex+=1;
     }
     mCurrentIndex = mCurrentIndex - 2;
+    prev = true;
     first=false;
     swapPhoto();
   });
