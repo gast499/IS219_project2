@@ -118,7 +118,7 @@ function swapPhoto() {
   first = false;
   }
 
-  else if(mCurrentIndex <= 0){
+  else if(mCurrentIndex < 0){
     mCurrentIndex = mImages.length - 1;
   }
   prev = false;
