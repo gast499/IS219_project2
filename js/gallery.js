@@ -70,7 +70,7 @@ var mUrl = '../images.json';
 if (typeof $_Get !== 'undefined'){
   mUrl = '../' + $_Get["json"];
 } 
-
+console.log(mUrl);
 // Array holding GalleryImage objects (see below).
 var mImages = [];
 
