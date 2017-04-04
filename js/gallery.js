@@ -112,6 +112,7 @@ function swapPhoto() {
   if (mCurrentIndex >= mImages.length){
     mCurrentIndex = 0;
   }
+  console.log(mCurrentIndex);
   $("#photo").attr("src", mImages[mCurrentIndex].img);
   mCurrentIndex++;
 }
