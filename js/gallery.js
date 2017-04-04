@@ -45,7 +45,6 @@ function getQueryParams(qs) {
 
 var $_GET = getQueryParams(document.location.search);
 console.log($_GET["json"]); // would output "John"
-console.log($_GET["json"].length);
 
 function GalleryImage(location, description, date, img) {
   this.location = location;
