@@ -112,6 +112,9 @@ function swapPhoto() {
   if (mCurrentIndex >= mImages.length){
     mCurrentIndex = 0;
   }
+  else if(mCurrentIndex <= 0){
+    mCurrentIndex = mImages.length - 1;
+  }
   console.log(mCurrentIndex);
   $("#photo").attr("src", mImages[mCurrentIndex].img);
   mCurrentIndex++;
@@ -144,10 +147,10 @@ $(document).ready( function() {
   });
   
   $('#prevPhoto').click(function(){
-    if (mCurrentIndex  === 0){
+    /*if (mCurrentIndex  === 0){
       mCurrentIndex = mImages.length-1;
-    }
-    mCurrentIndex -= 2;
+    }*/
+    mCurrentIndex = mCurrentIndex - 1;
     swapPhoto();
   });
 });
