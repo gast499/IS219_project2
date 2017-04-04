@@ -15,7 +15,7 @@
 
 animate();
 
-var mLastFrameTime = 5000;
+var mLastFrameTime = 0;
 var mWaitTime = 5000; //time in ms
 function animate() {
     requestAnimFrame( animate );
